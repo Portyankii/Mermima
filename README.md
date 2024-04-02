@@ -1,2 +1,0 @@
-# Gaem
-econ fair game

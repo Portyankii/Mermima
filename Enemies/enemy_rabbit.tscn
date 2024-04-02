@@ -1,0 +1,279 @@
+[gd_scene load_steps=29 format=3 uid="uid://bvl2rlm1ym6vc"]
+
+[ext_resource type="Script" path="res://Enemies/enemy_rabbit.gd" id="1_gbuos"]
+[ext_resource type="Texture2D" uid="uid://dg6jtka113eq1" path="res://Assets/Graphics/sprites/sprites_enemies.png" id="2_f8ojv"]
+[ext_resource type="AudioStream" uid="uid://hvxekmw1mw0x" path="res://Assets/Sounds/sfx/rabbit_damage.wav" id="3_858qk"]
+[ext_resource type="AudioStream" uid="uid://d0q7oj4n6rdh1" path="res://Assets/Sounds/sfx/rabbit_death.wav" id="4_ptd0t"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hcr48"]
+atlas = ExtResource("2_f8ojv")
+region = Rect2(1510, 451, 72, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hdorg"]
+atlas = ExtResource("2_f8ojv")
+region = Rect2(1582, 451, 72, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bnpck"]
+atlas = ExtResource("2_f8ojv")
+region = Rect2(502, 451, 72, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_17tgs"]
+atlas = ExtResource("2_f8ojv")
+region = Rect2(1366, 451, 72, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xcatk"]
+atlas = ExtResource("2_f8ojv")
+region = Rect2(1438, 451, 72, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8qn1r"]
+atlas = ExtResource("2_f8ojv")
+region = Rect2(646, 451, 72, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1jy0u"]
+atlas = ExtResource("2_f8ojv")
+region = Rect2(718, 451, 72, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pvlen"]
+atlas = ExtResource("2_f8ojv")
+region = Rect2(790, 451, 72, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bkodu"]
+atlas = ExtResource("2_f8ojv")
+region = Rect2(862, 451, 72, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ylqjm"]
+atlas = ExtResource("2_f8ojv")
+region = Rect2(502, 451, 72, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6gd5q"]
+atlas = ExtResource("2_f8ojv")
+region = Rect2(574, 451, 72, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8myes"]
+atlas = ExtResource("2_f8ojv")
+region = Rect2(646, 451, 72, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iodcw"]
+atlas = ExtResource("2_f8ojv")
+region = Rect2(358, 451, 72, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_76o7e"]
+atlas = ExtResource("2_f8ojv")
+region = Rect2(430, 451, 72, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kacve"]
+atlas = ExtResource("2_f8ojv")
+region = Rect2(934, 451, 72, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m78m8"]
+atlas = ExtResource("2_f8ojv")
+region = Rect2(1006, 451, 72, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q26d5"]
+atlas = ExtResource("2_f8ojv")
+region = Rect2(1078, 451, 72, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uddrp"]
+atlas = ExtResource("2_f8ojv")
+region = Rect2(1150, 451, 72, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nmeqc"]
+atlas = ExtResource("2_f8ojv")
+region = Rect2(1222, 451, 72, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e8lo7"]
+atlas = ExtResource("2_f8ojv")
+region = Rect2(1294, 451, 72, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5cx1g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hcr48")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hdorg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bnpck")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_17tgs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xcatk")
+}],
+"loop": true,
+"name": &"damage",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8qn1r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1jy0u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pvlen")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bkodu")
+}],
+"loop": false,
+"name": &"dead",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ylqjm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6gd5q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8myes")
+}],
+"loop": true,
+"name": &"falling",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 10.0,
+"texture": SubResource("AtlasTexture_iodcw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_76o7e")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kacve")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m78m8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q26d5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uddrp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nmeqc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e8lo7")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4klqh"]
+size = Vector2(32, 72)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7kt5p"]
+size = Vector2(32, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2h4lu"]
+size = Vector2(640, 64)
+
+[node name="enemyRabbit" type="CharacterBody2D" groups=["Persist", "enemies"]]
+z_index = 1
+texture_filter = 1
+position = Vector2(0, -16)
+collision_layer = 0
+floor_max_angle = 1.0472
+script = ExtResource("1_gbuos")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 2)
+sprite_frames = SubResource("SpriteFrames_5cx1g")
+animation = &"walk"
+frame_progress = 0.543524
+
+[node name="AttackingTimer" type="Timer" parent="AnimatedSprite2D"]
+wait_time = 0.75
+one_shot = true
+
+[node name="AttackedTimer" type="Timer" parent="AnimatedSprite2D"]
+wait_time = 0.75
+one_shot = true
+
+[node name="DeadTimer" type="Timer" parent="AnimatedSprite2D"]
+wait_time = 0.75
+one_shot = true
+
+[node name="Area2D" type="Area2D" parent="." groups=["enemies"]]
+unique_name_in_owner = true
+light_mask = 2
+visibility_layer = 2
+collision_layer = 6
+collision_mask = 2
+input_pickable = false
+monitoring = false
+monitorable = false
+
+[node name="main_collision" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 8)
+shape = SubResource("RectangleShape2D_4klqh")
+
+[node name="patrolDirectionTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 4.0
+autostart = true
+
+[node name="followDelay" type="Timer" parent="patrolDirectionTimer"]
+unique_name_in_owner = true
+wait_time = 0.2
+one_shot = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 8)
+shape = SubResource("RectangleShape2D_7kt5p")
+
+[node name="particle_limiter" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="hit" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_858qk")
+
+[node name="death" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_ptd0t")
+volume_db = 5.0
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+modulate = Color(1, 1, 1, 0.0980392)
+rect = Rect2(-500, -500, 1000, 1000)
+
+[node name="scanForPlayer" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+input_pickable = false
+
+[node name="scanForPlayer_CollisionShape2D" type="CollisionShape2D" parent="scanForPlayer"]
+unique_name_in_owner = true
+position = Vector2(-320, 4)
+shape = SubResource("RectangleShape2D_2h4lu")
+
+[connection signal="timeout" from="AnimatedSprite2D/AttackingTimer" to="." method="_on_attacking_timer_timeout"]
+[connection signal="timeout" from="AnimatedSprite2D/AttackedTimer" to="." method="_on_attacked_timer_timeout"]
+[connection signal="timeout" from="AnimatedSprite2D/DeadTimer" to="." method="_on_dead_timer_timeout"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="timeout" from="patrolDirectionTimer" to="." method="_on_patrol_direction_timer_timeout"]
+[connection signal="timeout" from="patrolDirectionTimer/followDelay" to="." method="_on_follow_delay_timeout"]
+[connection signal="timeout" from="particle_limiter" to="." method="_on_particle_limiter_timeout"]
+[connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="." method="offScreen_load"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="offScreen_unload"]
+[connection signal="area_entered" from="scanForPlayer" to="." method="_on_scan_for_player_area_entered"]
+[connection signal="area_exited" from="scanForPlayer" to="." method="_on_scan_for_player_area_exited"]
