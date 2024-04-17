@@ -157,7 +157,3 @@ transform = Transform2D(1.25, 0, 0, 1.25, 8400, 100)
 position = Vector2(-368, 224)
 displayedText = "Press ctrl to attack with your egg!"
 displayedText_size = 1
-
-[connection signal="area_entered" from="tileset_objects/LevelExit" to="tileset_objects/LevelExit" method="_on_area_entered"]
-[connection signal="area_entered" from="tileset_objects/fire" to="tileset_objects/fire" method="_on_area_entered"]
-[connection signal="area_entered" from="tileset_objects/@Area2D@40968" to="tileset_objects/@Area2D@40968" method="_on_area_entered"]
