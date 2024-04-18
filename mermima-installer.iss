@@ -16,7 +16,7 @@ DefaultDirName={autopf}\Mermima
 DisableProgramGroupPage=yes
 ; Remove the following line to run in administrative install mode (install for all users.)
 PrivilegesRequired=lowest
-OutputBaseFilename=mysetup
+OutputBaseFilename=Mermima Setup
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
@@ -28,7 +28,7 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "C:\Users\gabri\Downloads\Mermima-WINDOWS\Mermima.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{src}\files\Mermima.exe"; DestDir: "{app}"; Flags: external
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
